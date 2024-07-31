@@ -72,7 +72,7 @@ class _NamecheapLexiconClient(dns_common_lexicon.LexiconClient):
 
     def __init__(self, username, api_key, ttl, domain):
         super(_NamecheapLexiconClient, self).__init__()
-        my_ip = urlopen('http://ip.42.pl/raw').read()
+        my_ip = urlopen('https://api.ipify.org').read()
         logger.debug(my_ip)
         self.provider = namecheap.Provider({
             'auth_username': username,
